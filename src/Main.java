@@ -14,14 +14,21 @@ public class Main {
         
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
-            System.out.println(line);
-            //rightMostChar(line);
+            //System.out.println(line);
+            rightMostChar(line);
             
             
         }
     }
     
     public static void rightMostChar(String line) {
-        String[] lists = line.split(";"); 
+        String[] input = line.split(",");
+        int index;
+        
+        if(input.length < 1)
+            index = input[0].lastIndexOf(input[1]);
+        else
+            index = input[0].lastIndexOf(" ");
+        System.out.println(index);
     }
 }
