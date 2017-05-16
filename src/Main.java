@@ -25,10 +25,11 @@ public class Main {
         String[] input = line.split(",");
         int index;
         
-        if(input.length < 1)
+        if(input.length > 1)
             index = input[0].lastIndexOf(input[1]);
         else
             index = input[0].lastIndexOf(" ");
+        
         System.out.println(index);
     }
 }
